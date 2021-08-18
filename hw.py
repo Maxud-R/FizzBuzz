@@ -4,3 +4,5 @@ class Hw:
         self.JJ = jj
     def print(self, s):
         print(self.JJ+str(s))
+    def show(self):
+        print(self.JJ)
