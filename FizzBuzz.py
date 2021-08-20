@@ -1,6 +1,5 @@
 #Algorithm that replaces every third word in the letter to Fizz, and every fifth letter in the word to Buzz.
-#Алгоритм, который заменяет каждое третее слово в письме на Fizz и каждую пятую букву в слове на Buzz
-#Принимает строку от 7 до 100 символов включительно и буквы нижнего регистра
+#Length of the input string: 7 ≤ |s| ≤ 100
 class FizzBuzz:
     def replace(self, rawstr):
         if len(rawstr) < 7 or len(rawstr) > 100 or not (rawstr in rawstr.lower()):
@@ -29,4 +28,3 @@ class FizzBuzz:
             wordList[word] = "Fizz"
             
         return " ".join(wordList)
-print("Result: "+FizzBuzz().replace(input("Input a string:")))
