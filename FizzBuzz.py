@@ -5,7 +5,7 @@ class FizzBuzz:
         if len(rawstr) < 7 or len(rawstr) > 100 or not (rawstr in rawstr.lower()) or rawstr.isdigit():
             raise Exception("Wrong input string, str length must be 7 <= s <= 100 and string must consist only of lowercase letters a-z")
         
-        #this part splits string into words and words into parts, 5 char length
+        #this part splits string into words and words into parts, 5 char length, and add it to list in list
         wordList = rawstr.split(" ")
         for word in range(0, len(wordList)):
             tempWord = wordList[word]
@@ -16,7 +16,7 @@ class FizzBuzz:
                     tempWord = tempWord[5:]
             wordList[word].append(tempWord)
             
-        #next part replace each last letter of part to Buzz
+        #replace each fifth(last) letter of the part to Buzz
         for word in range(len(wordList)):
             for part in range(len(wordList[word])):
                 if len(wordList[word][part]) >= 5:
