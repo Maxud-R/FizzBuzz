@@ -13,16 +13,16 @@ class FBTest:
         for st in dic:
             assert self.ob.replace(st) == dic[st], 'TestReplace not ok with string:'+dic[st]
         #Testing error raising
-        try:
-            self.ob.replace('ase') #method doesn`t use string < 7 length
-            self.ob.replace('AAABBBC') #method doesn`t use upper case chars
-            self.ob.replace('2387182Gs dasb') #method doesn`t use digits
-            self.ob.replace('2387182') #стоит всё таки поместить в цикл, потому что если один не подходит то уже вызывает ошибку, даже если остальные норм
-            self.ob.replace('a'*101) ##method doesn`t use string > 100 length
-            print('Not Ok: input string not correct, but error does`nt throwed')
-        except Exception:
-            print('OK: Exception was throwed on not correct string')
+        lis = ['ase', 'AAABBBC', '2387182Gs dasb', '2387182', 'a'*101]
+        for a in lis:
+            try:
+                self.ob.replace(a)
+                print('Not Ok, string was: '+a+', but error doesn`t throwed')
+                return 1
+            except Exception:
+                pass
+        print('OK: Exception was throwed on all incorrect strings')
         print('TestFBDetector All passed') #otherwise error will throwed above
-
+        return 0
 test = FBTest()
 test.TestReplace()

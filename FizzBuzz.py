@@ -2,8 +2,8 @@
 #Length of the input string: 7 ≤ |s| ≤ 100
 class FizzBuzz:
     def replace(self, rawstr):
-        if len(rawstr) < 7 or len(rawstr) > 100 or not (rawstr in rawstr.lower()):
-            raise Exception("Wrong input string, str length must be 7 <= s <= 100 and string must consist of lowercase letters a-z")
+        if len(rawstr) < 7 or len(rawstr) > 100 or not (rawstr in rawstr.lower()) or rawstr.isdigit():
+            raise Exception("Wrong input string, str length must be 7 <= s <= 100 and string must consist only of lowercase letters a-z")
         
         #this part splits string into words and words into parts, 5 char length
         wordList = rawstr.split(" ")

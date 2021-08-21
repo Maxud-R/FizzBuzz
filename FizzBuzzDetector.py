@@ -1,6 +1,8 @@
 class FizzBuzzDetector:
     def getLen(self, astring): #length of substr, alternative for len()
         CurChar = 0
+        if not astring:
+            return 0
         while True: 
             try:
                 CurChar += 1
@@ -12,6 +14,8 @@ class FizzBuzzDetector:
         OverlapCount = 0
         SubstrCharCount = self.getLen(substr)
         stringCharCount = self.getLen(string)
+        if not stringCharCount or not SubstrCharCount:
+            return 0
         stringCur = 0
         while True:
             substrCur = 0
