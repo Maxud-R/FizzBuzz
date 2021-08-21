@@ -4,7 +4,7 @@ class FBTest:
     def __init__(self):
         self.ob = FizzBuzz()
         
-    def TestReplace(self):
+    def testReplace(self):
         dic = {'aaaaabbbbbccccc dddddeeeee ffgg hhhhh iiii': 'aaaaBuzzbbbbBuzzccccBuzz ddddBuzzeeeeBuzz Fizz hhhhBuzz iiii',
                'djh djh kej kkfj w er q': 'djh djh Fizz kkfj w Fizz q',
                'q e r f': 'q e Fizz f',
@@ -25,4 +25,4 @@ class FBTest:
         print('TestFBDetector All passed') #otherwise error will throwed above
         return 0
 test = FBTest()
-test.TestReplace()
+test.testReplace()
